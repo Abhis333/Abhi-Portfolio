@@ -1,0 +1,245 @@
+/* ==========================================================================
+   Abhishek Maurya portfolio: customisations on top of css/style.css.
+   Keeps the template palette: black #000, accent #ffbd39, text #999.
+   ========================================================================== */
+
+:root {
+  --accent: #ffbd39;
+  --card: rgba(255, 255, 255, 0.1);
+  --card-hover: rgba(255, 255, 255, 0.14);
+  --ease: cubic-bezier(.22, .61, .36, 1);
+}
+
+/* Smooth scrolling is handled by the jQuery animation in js/main.js
+   (CSS scroll-behavior would fight it, so it is not set here). */
+html, body { overflow-x: hidden; }
+
+/* Navbar container was a fixed 1110px; let it shrink on tablets */
+.ftco-navbar-light .container { max-width: 100%; }
+
+/* Keyboard focus that matches the theme */
+a:focus-visible,
+button:focus-visible,
+.btn:focus-visible {
+  outline: 2px solid var(--accent) !important;
+  outline-offset: 3px;
+}
+
+/* ---------- Navigation ---------- */
+.ftco-navbar-light .navbar-nav > .nav-item.cta > a,
+.ftco-navbar-light.scrolled .nav-item.cta > a {
+  color: #000 !important;
+  transition: transform .25s var(--ease), box-shadow .25s var(--ease);
+}
+.ftco-navbar-light .navbar-nav > .nav-item.cta > a span,
+.ftco-navbar-light.scrolled .nav-item.cta > a span { color: #000 !important; font-weight: 600; }
+.ftco-navbar-light .navbar-nav > .nav-item.cta > a span:before { display: none; }
+.ftco-navbar-light .navbar-nav > .nav-item.cta > a:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 10px 24px -10px rgba(255, 189, 57, .7);
+}
+@media (min-width: 992px) {
+  .ftco-navbar-light .navbar-nav > .nav-item.cta { margin-left: 10px; }
+}
+@media (max-width: 991.98px) {
+  .ftco-navbar-light .navbar-nav > .nav-item.cta > a { display: inline-block; padding: .6rem 1.2rem; }
+  .ftco-navbar-light.scrolled .navbar-toggler { color: rgba(255, 255, 255, .6) !important; }
+}
+
+/* ---------- Hero ---------- */
+.hero .one-third.hero-art {
+  background-size: contain;
+  background-position: center;
+}
+@media (max-width: 991.98px) {
+  .hero .one-third.hero-art { opacity: .2; }
+}
+
+.hero-role {
+  display: block;
+  min-height: 1.6em;
+  font-size: 30px;
+  font-weight: 700;
+  color: #fff;
+}
+.hero-role .typed-cursor {
+  display: inline-block;
+  width: 3px;
+  height: 1em;
+  margin-left: 4px;
+  vertical-align: -0.12em;
+  background: var(--accent);
+  animation: caret-blink 1s steps(1) infinite;
+}
+@keyframes caret-blink { 50% { opacity: 0; } }
+
+.owl-carousel.home-slider .slider-item .slider-text h2.hero-headline {
+  font-size: 22px;
+  line-height: 1.5;
+  color: rgba(255, 255, 255, .85);
+  margin: 1.2rem 0 1.6rem;
+}
+.hero-actions { display: flex; flex-wrap: wrap; gap: 12px; }
+@media (max-width: 991.98px) {
+  .hero-actions { justify-content: center; }
+  .hero-role { font-size: 24px; }
+  .owl-carousel.home-slider .slider-item .slider-text h2.hero-headline { font-size: 18px; }
+}
+
+/* ---------- Buttons: subtle lift ---------- */
+.btn {
+  transition: transform .25s var(--ease), box-shadow .25s var(--ease), background .25s ease, color .25s ease;
+}
+.btn:hover { transform: translateY(-3px); }
+.btn.btn-primary:hover { box-shadow: 0 14px 28px -12px rgba(255, 189, 57, .75); }
+.btn.btn-white.btn-outline-white:hover {
+  background: var(--accent) !important;
+  border-color: var(--accent) !important;
+  color: #000 !important;
+}
+.btn .icon { margin-right: 6px; }
+
+/* ---------- About ---------- */
+.about-mf .about-img { margin-bottom: 2rem; }
+.about-mf .about-img img { margin-left: 10px; max-width: 140px; }
+.img-about .about-info p { margin-bottom: .5rem; }
+.img-about .about-info .title-s { color: #fff; font-weight: 600; }
+.img-about .about-info a { color: #999; word-break: break-word; }
+.img-about .about-info a:hover { color: var(--accent); }
+.ftco-about ul.about-info li span:last-child { word-break: break-word; }
+@media (max-width: 575.98px) {
+  .ftco-about ul.about-info li { flex-direction: column; }
+  .ftco-about ul.about-info li span,
+  .ftco-about ul.about-info li span:first-child { width: 100%; }
+}
+
+.skill-mf .title-s { color: #fff; font-weight: 600; margin-bottom: .6rem; }
+.skill-group { margin-bottom: 1rem; }
+.skill-group-label {
+  display: block;
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: var(--accent);
+  margin-bottom: .35rem;
+}
+
+/* Tag chips used for skills, technologies and interests */
+.tag-list { display: flex; flex-wrap: wrap; gap: 8px; padding: 0; margin: 0; list-style: none; }
+.tag {
+  display: inline-block;
+  padding: 4px 14px;
+  font-size: 14px;
+  line-height: 1.6;
+  color: #fff;
+  border: 1px solid rgba(255, 255, 255, .2);
+  border-radius: 40px;
+  transition: border-color .25s ease, color .25s ease, background .25s ease, transform .25s var(--ease);
+}
+.tag:hover { border-color: var(--accent); color: var(--accent); transform: translateY(-2px); }
+.tag.tag-solid { background: var(--accent); border-color: var(--accent); color: #000; }
+
+.ftco-about .counter-wrap .text p .label-strong { color: #fff; }
+.about-actions { display: flex; flex-wrap: wrap; gap: 12px; }
+
+/* ---------- Cards: lift + shadow on hover ---------- */
+.resume-wrap,
+.contact-section .box,
+.ftco-counter .block-18,
+.project-card {
+  transition: transform .35s var(--ease), box-shadow .35s var(--ease), background .35s ease;
+}
+.resume-wrap:hover,
+.ftco-counter .block-18:hover,
+.project-card:hover {
+  transform: translateY(-6px);
+  background: var(--card-hover);
+  box-shadow: 0 22px 40px -22px rgba(255, 189, 57, .45);
+}
+.contact-section .box:hover { transform: translateY(-6px); }
+.contact-section .box .icon { transition: background .3s ease, transform .3s var(--ease); }
+.contact-section .box .icon span { transition: color .3s ease; }
+.contact-section .box:hover .icon { background: var(--accent); transform: scale(1.05); }
+.contact-section .box:hover .icon span { color: #000; }
+
+/* Resume section: certifications, skills and the smaller cards */
+.resume-wrap { height: calc(100% - 30px); }
+.resume-wrap .date { font-size: 22px; }
+.resume-wrap h2 { font-size: 22px; margin-top: .3rem; }
+.resume-wrap .position { display: block; }
+.resume-wrap .detail { margin: 1rem 0 0; }
+.resume-wrap.compact { padding: 24px; }
+.resume-wrap.compact h3 {
+  font-size: 13px;
+  font-weight: 600;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  color: var(--accent);
+  margin-bottom: .8rem;
+}
+.section-label { width: 100%; padding: 0 15px; text-align: center; }
+/* Same centred, stretched heading as the original template */
+.section-label .big-4 { display: table; margin: 0 auto; }
+@media (max-width: 575.98px) { .big-4 { font-size: 32px; } }
+.resume-cta { display: flex; flex-wrap: wrap; justify-content: center; gap: 14px; }
+
+/* ---------- Project ---------- */
+.project-card {
+  background: var(--card);
+  border-radius: 5px;
+  overflow: hidden;
+}
+.project-card .project-media {
+  display: block;
+  height: 100%;
+  min-height: 260px;
+  background-color: #191919;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  transition: transform .5s var(--ease);
+}
+.project-card .media-wrap { overflow: hidden; height: 100%; }
+.project-card:hover .project-media { transform: scale(1.06); }
+.project-card .project-body { padding: 32px; }
+.project-card .project-type {
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  color: var(--accent);
+}
+.project-card h3 { font-size: 26px; font-weight: 600; margin: .3rem 0 1rem; }
+.project-card ul { padding-left: 1.1rem; margin-bottom: 1.2rem; }
+.project-card ul li { margin-bottom: .35rem; }
+
+/* ---------- Hire-me band ---------- */
+.ftco-hireme .hireme-actions { display: flex; flex-wrap: wrap; justify-content: center; gap: 14px; }
+.ftco-hireme h4 { color: rgba(255, 255, 255, .85); font-size: 20px; }
+@media (max-width: 767.98px) { .ftco-hireme h2 { font-size: 30px; } }
+
+/* ---------- Contact ---------- */
+.contact-section .contact-info p a { word-break: break-word; }
+.contact-section .contact-info p a:hover { color: var(--accent); }
+.contact-section .box .resume-links a { display: inline-block; margin: 0 6px; }
+.contact-cta h2 { font-size: 30px; }
+.contact-cta .btn { margin-left: 8px; vertical-align: middle; }
+@media (max-width: 575.98px) {
+  .contact-cta h2 { font-size: 24px; }
+  .contact-cta .btn { display: block; margin: 16px auto 0; max-width: 260px; }
+}
+
+/* ---------- Reduced motion: show everything, skip animation ---------- */
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: .01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: .01ms !important;
+  }
+  .ftco-animate { opacity: 1 !important; visibility: visible !important; }
+  .btn:hover, .tag:hover, .resume-wrap:hover, .ftco-counter .block-18:hover,
+  .project-card:hover, .contact-section .box:hover { transform: none; }
+  .project-card:hover .project-media { transform: none; }
+  .hero-role .typed-cursor { display: none; }
+}

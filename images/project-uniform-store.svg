@@ -1,0 +1,40 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 500" role="img" aria-label="Illustration of the College Uniform E-Commerce Website">
+  <rect width="800" height="500" fill="#191919"/>
+  <!-- browser window -->
+  <rect x="70" y="50" width="660" height="400" rx="14" fill="#0d0d0d" stroke="#ffffff" stroke-opacity="0.12" stroke-width="2"/>
+  <rect x="70" y="50" width="660" height="44" rx="14" fill="#262626"/>
+  <rect x="70" y="80" width="660" height="14" fill="#262626"/>
+  <circle cx="98" cy="72" r="6" fill="#ffbd39"/><circle cx="118" cy="72" r="6" fill="#ffffff" fill-opacity="0.3"/><circle cx="138" cy="72" r="6" fill="#ffffff" fill-opacity="0.3"/>
+  <rect x="170" y="62" width="300" height="20" rx="10" fill="#000000" fill-opacity="0.5"/>
+  <!-- cart icon -->
+  <g fill="none" stroke="#ffbd39" stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M664 62h8l6 18h28l5-13h-36"/>
+    <circle cx="682" cy="86" r="2.5" fill="#ffbd39"/><circle cx="701" cy="86" r="2.5" fill="#ffbd39"/>
+  </g>
+  <!-- product cards -->
+  <g font-family="Poppins, 'Segoe UI', Arial, sans-serif">
+    <g transform="translate(105 125)">
+      <rect width="180" height="290" rx="10" fill="#1f1f1f"/>
+      <path d="M58 40l22-12h20l22 12 18 26-20 12-10-12v80H70V66l-10 12-20-12z" fill="#ffbd39"/>
+      <rect x="20" y="190" width="120" height="12" rx="6" fill="#ffffff" fill-opacity="0.8"/>
+      <rect x="20" y="212" width="70" height="10" rx="5" fill="#ffffff" fill-opacity="0.3"/>
+      <rect x="20" y="246" width="140" height="28" rx="14" fill="#ffbd39"/>
+    </g>
+    <g transform="translate(310 125)">
+      <rect width="180" height="290" rx="10" fill="#1f1f1f"/>
+      <path d="M58 40l22-12h20l22 12 18 26-20 12-10-12v80H70V66l-10 12-20-12z" fill="#ffffff" fill-opacity="0.85"/>
+      <path d="M90 30v25" stroke="#191919" stroke-width="3"/>
+      <rect x="20" y="190" width="120" height="12" rx="6" fill="#ffffff" fill-opacity="0.8"/>
+      <rect x="20" y="212" width="70" height="10" rx="5" fill="#ffffff" fill-opacity="0.3"/>
+      <rect x="20" y="246" width="140" height="28" rx="14" fill="none" stroke="#ffbd39" stroke-width="2"/>
+    </g>
+    <g transform="translate(515 125)">
+      <rect width="180" height="290" rx="10" fill="#1f1f1f"/>
+      <path d="M50 40h80l8 120H42z" fill="#ffbd39" fill-opacity="0.55"/>
+      <rect x="50" y="40" width="80" height="14" fill="#ffbd39"/>
+      <rect x="20" y="190" width="120" height="12" rx="6" fill="#ffffff" fill-opacity="0.8"/>
+      <rect x="20" y="212" width="70" height="10" rx="5" fill="#ffffff" fill-opacity="0.3"/>
+      <rect x="20" y="246" width="140" height="28" rx="14" fill="#ffbd39"/>
+    </g>
+  </g>
+</svg>
